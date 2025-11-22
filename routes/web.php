@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ChatbotController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -164,3 +164,4 @@ Route::get('/delete-blog/{idBlog}','BlogController@delete_blog');
 Route::post('/submit-add-blog','BlogController@submit_add_blog');
 Route::post('/submit-edit-blog/{idBlog}','BlogController@submit_edit_blog');
 
+Route::post('/chatbot/suggest', [ChatbotController::class, 'suggest'])->name('chatbot.suggest');

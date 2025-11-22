@@ -191,6 +191,11 @@
                                         <ul class="dropdown-menu">
                                             <li><a href="{{URL::to('/register')}}">Đăng ký</a></li>
                                             <li><a href="{{URL::to('/login')}}">Đăng nhập</a></li>
+                                            <li style="border-top: 1px solid #eee; margin-top: 5px; padding-top: 5px;">
+                                                <a href="{{ url('/admin') }}" style="color: black; font-weight: bold;">
+                                                    <i class="fa fa-user-secret"></i> Quản trị (Admin)
+                                                </a>
+                                            </li>
                                         </ul>
                                         <input type="hidden" id="idCustomer" value="">
                                         @endif
@@ -846,7 +851,7 @@
         });
 
         $(document).ready(function() {
-            APP_URL = '{{ url('/') }}';
+            APP_URL = '{{ url(' / ') }}';
 
             // Quick view sản phẩm
             $('.quick-view-pd').on('click', function() {
@@ -1121,6 +1126,7 @@
             });
         });
     </script>
+    @include('partials.chatbot')
 </body>
 
 </html>
